@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+{% endblock %}
+{% block body%}
+
+    <div class="main">
+		<script type="text/javascript">
+			var w_back = 0;
+		</script>
+
+		<div class="welcome">
+			<div class="w-front">
+                    {% if dil == 'en' %}
+					<p><span id="w-text">Welcome to the FAQ!</span></p>
+                    {% elif dil == 'ru' %}
+					<p><span id="w-text">FAQ ывавыа!</span></p>
+                    {% else %}
+					<p><span id="w-text">Sorag Jogap bölümine hoş geldiňiz!</span></p>
+                    {% endif %}
+			</div>
+			<div class="w-back" id="w-back">
+				<img src="{% static 'uploads/habarlar.jpg'%}" class="w-img">
+			</div>
+		</div>
+    <div class="questions-field">
+        {% if  dil == 'en'%}
+		<div class="posts-main-header">SOWAL-JOGAP en</div>
+        {% elif  dil == 'ru'%}
+		<div class="posts-main-header">SOWAL-JOGAP ru</div>
+        {% else%}
+		<div class="posts-main-header">SOWAL-JOGAP tm</div>
+        {% endif %}
+        {% for s in surat %}
+            {% if dil == 'en' %}
+            <div class="question">
+                <div class="question-header">
+                    <p>{{ forloop.counter }}. {{ s.Sorag_en }}</p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>	{{ s.Jogap_en }}</p>
+                </div>
+            </div>
+            {% elif dil == 'ru' %}
+            <div class="question">
+                <div class="question-header">
+                    <p>{{ forloop.counter }}. {{ s.Sorag_ru }}</p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>{{ s.Jogap_ru }}</p>
+                </div>
+            </div>
+            {% else %}
+            <div class="question">
+                <div class="question-header">
+                    <p> {{ forloop.counter }}. {{ s.Sorag_tm }}</p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>{{ s.Jogap_tm }}</p>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+	</div>
+    </div>
+{% endblock %}
+{% block js %}
+	<script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/welcome.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/image_player.js'%}"></script>
+    <script src="{%static 'js/jquery.js' %}"></script>
+    <script src="{%static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript">
+		$('div.answer').hide();
+		$('div.answer').first().slideDown(500);
+		$('div.question-header').first().addClass('header-green');
+		$('div.question-header').on('click', function(){
+			var $default = 0;
+			if($(this).attr('class') == 'question-header header-green'){
+				$default = 1;
+			}
+			$('div.answer').slideUp(500);
+			$('div.question-header').removeClass('header-green');
+			if($default == 0){
+				$(this).next().slideDown(500);
+				$(this).addClass('header-green');
+			}
+		});
+	</script>
+{% endblock %}

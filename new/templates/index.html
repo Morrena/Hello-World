@@ -1,0 +1,294 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+{% endblock %}
+{% block body %}
+    	<div class="main">
+            <div class="img-slide">
+                <div class="i-slide-controll">
+                    <div id="isc-left"><</div>
+                    <div id="isc-right">></div>
+                </div>
+                <div class="i-slide" id="i-slide">
+                    <div class="i-slide-item">
+                        <div class="i-slide-img-main">
+                            <img src="{{ MEDIA_URL }}{{ Slide.0.Slide1_1.url }}">
+                            <a href="#">
+                                <div class="slide-main-header">
+                                    <li>{{ Slide.0.Slide1_1_tm }}</li>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="i-slide-imgs" id="i-slide-img2">
+                            <img src="{{ MEDIA_URL }}{{ Slide.0.Slide1_2.url }}" >
+                            <a href="#">
+                                <div class="slide-right-header">
+                                    <li>{{ Slide.0.Slide1_2_tm }}</li>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="i-slide-imgs" id="i-slide-img3">
+                            <img src="{{ MEDIA_URL }}{{ Slide.0.Slide1_3.url }}" >
+                            <a href="#">
+                                <div class="slide-right-header">
+                                    <li>{{ Slide.0.Slide1_3_tm }}</li>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="i-slide-item">
+                        <div class="i-slide-img-main">
+                            <img src="{{ MEDIA_URL }}{{ Slide.0.Slide2_1.url }}">
+                            <a href="#">
+                                <div class="slide-main-header">
+                                    <li>Taryhy ýerlere gezelençler ýurt goragçylarynyň watançylyk terbiýesini ösdürýär</li>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="i-slide-imgs" id="i-slide-img2">
+                            <img src="{{ MEDIA_URL }}{{ Slide.0.Slide2_2.url }}" >
+                            <a href="#">
+                                <div class="slide-right-header">
+                                    <li>Taryhy ýerlere gezelençler</li>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="i-slide-imgs" id="i-slide-img3">
+                            <img src="{{ MEDIA_URL }}{{ Slide.0.Slide2_3.url }}" >
+                            <a href="#">
+                                <div class="slide-right-header">
+                                    <li>Taryhy ýerlere gezelençler</li>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="i-slide-item">
+                        <div class="i-slide-img-main">
+                            <img src="{{ MEDIA_URL }}{{ Slide.0.Slide3_1.url }}">
+                            <a href="#">
+                                <div class="slide-main-header">
+                                    <li>{{ Slide.0.Slide3_1_tm }}</li>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="i-slide-imgs" id="i-slide-img2">
+                            <img src="{{ MEDIA_URL }}{{ Slide.0.Slide3_2.url }}" >
+                            <a href="#">
+                                <div class="slide-right-header">
+                                    <li>{{ Slide.0.Slide3_2_tm }}</li>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="i-slide-imgs" id="i-slide-img3">
+                            <img src="{{ MEDIA_URL }}{{ Slide.0.Slide3_3.url }}" >
+                            <a href="#">
+                                <div class="slide-right-header">
+                                    <li>{{ Slide.0.Slide3_3_tm }}</li>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+                <div class="i-slide-indicator">
+                    <li class="inline indicator_default" id="indicator1" onclick="def=slide(def,1); j=0;">.</li>
+                    <li class="inline indicator" id="indicator2" onclick="def=slide(def,2);j=0">.</li>
+                    <li class="inline indicator" id="indicator3" onclick="def=slide(def,3);j=0">.</li>
+                </div>
+        </div>
+
+		<div class="posts post-index">
+			<div class="posts-main-header" id="posts-main">
+                {% if dil == 'en' %}IŇ TÄZE HABARLAR E
+                {% elif dil == 'ru' %}IŇ TÄZE HABARLAR R
+                {% else %}IŇ TÄZE HABARLAR{% endif %}
+            </div>
+			<div class="post-main">
+            {% if dil == 'en' %}
+				<div class="post-big">
+					<div class="post-big-header">
+						<a href="{% url 'habar' pk=k.1.0.id%}"><p>{{ k.1.0.Ady_en }}</p></a>
+					</div>
+					<script type="text/javascript">
+						var i = [];
+						i[1] = '{{ MEDIA_URL }}{{ k.1.0.Esasy_Surat.url }}';
+					</script>
+					<img src="{{ MEDIA_URL }}{{ k.1.0.Esasy_Surat.url }}" class="post-big-img" onclick="view_image(i, '{{ MEDIA_URL }}{{ k.1.0.Esasy_Surat.url }}', '')">
+					<div class="post-big-body">
+						<p>     {{ k.1.0.Makala_en|truncatechars:900 }}</p>
+					</div>
+					<a href="{% url 'habar' k.1.0.id%}"><button class="post-big-btn">DOWAMY E</button></a>
+					<div class="post-big-date">{{ k.1.0.Wagty|date:"d.m.Y" }}</div>
+				</div>
+            {% elif dil == 'ru' %}
+				<div class="post-big">
+					<div class="post-big-header">
+						<a href="{% url 'habar' pk=k.1.0.id%}"><p>{{ k.1.0.Ady_ru }}</p></a>
+					</div>
+					<script type="text/javascript">
+						var i = [];
+						i[1] = '{{ MEDIA_URL }}{{ k.1.0.Esasy_Surat.url }}';
+					</script>
+					<img src="{{ MEDIA_URL }}{{ k.1.0.Esasy_Surat.url }}" class="post-big-img" onclick="view_image(i, '{{ MEDIA_URL }}{{ k.1.0.Esasy_Surat.url }}', '')">
+					<div class="post-big-body">
+						<p>     {{ k.1.0.Makala_ru|truncatechars:900 }}</p>
+					</div>
+					<a href="{% url 'habar' k.1.0.id%}"><button class="post-big-btn">DOWAMY R</button></a>
+					<div class="post-big-date">{{ k.1.0.Wagty|date:"d.m.Y" }}</div>
+				</div>
+            {% else %}
+				<div class="post-big">
+					<div class="post-big-header">
+						<a href="{% url 'habar' pk=k.1.0.id%}"><p>{{ k.1.0.Ady_tm }}</p></a>
+					</div>
+					<script type="text/javascript">
+						var i = [];
+						i[1] = '{{ MEDIA_URL }}{{ k.1.0.Esasy_Surat.url }}';
+					</script>
+					<img src="{{ MEDIA_URL }}{{ k.1.0.Esasy_Surat.url }}" class="post-big-img" onclick="view_image(i, '{{ MEDIA_URL }}{{ k.1.0.Esasy_Surat.url }}', '')">
+					<div class="post-big-body">
+						<p>     {{ k.1.0.Makala_tm|truncatechars:900 }}</p>
+					</div>
+					<a href="{% url 'habar' k.1.0.id%}"><button class="post-big-btn">DOWAMY</button></a>
+					<div class="post-big-date">{{ k.1.0.Wagty|date:"d.m.Y" }}</div>
+				</div>
+            {% endif %}
+				<div class="post-little-field">
+                    {% for s in k %}
+                        {% if s and s.0.Menu.id != 2%}
+                            {% if dil == 'en' %}
+                            {% if s.0.Esasy_Surat %}
+                                <div class="post-little">
+                                    <script type="text/javascript">
+                                        var im{{ forloop.counter }} = [];
+                                        im{{ forloop.counter }}[1] = '{{ MEDIA_URL }}{{ s.0.Esasy_Surat.url }}';
+                                    </script>
+                                    <img src="{{ MEDIA_URL }}{{ s.0.Esasy_Surat.url }}" class="post-little-img" onclick="view_image(im{{ forloop.counter }}, '{{ MEDIA_URL }}{{ s.0.Esasy_Surat.url }}', '')">
+                                    <div class="post-little-elem">
+                                        <div class="post-big-header plh">
+                                            <a href="{% url 'habar' pk=s.0.id%}"><p>{{s.0.Ady_en}}</p></a>
+                                        </div>
+                                        <a href="{% url 'habar' pk=s.0.id%}"><button class="post-big-btn">DOWAMY E</button></a>
+                                        <div class="post-big-date">{{ s.0.Wagty|date:"d.m.Y" }}</div>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="post-little">
+                                    <div class="post-little-elem" style="width: 100%">
+                                        <div class="post-big-header plh">
+                                            <a href="{% url 'habar' pk=s.0.id%}"><p>{{s.0.Ady_en}}</p></a>
+                                        </div>
+                                        <a href="{% url 'habar' pk=s.0.id%}"><button class="post-big-btn">DOWAMY E</button></a>
+                                        <div class="post-big-date">{{ s.0.Wagty|date:"d.m.Y" }}</div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% elif dil == 'ru' %}
+                            {% if s.0.Esasy_Surat %}
+                                <div class="post-little">
+                                    <script type="text/javascript">
+                                        var im{{ forloop.counter }} = [];
+                                        im{{ forloop.counter }}[1] = '{{ MEDIA_URL }}{{ s.0.Esasy_Surat.url }}';
+                                    </script>
+                                    <img src="{{ MEDIA_URL }}{{ s.0.Esasy_Surat.url }}" class="post-little-img" onclick="view_image(im{{ forloop.counter }}, '{{ MEDIA_URL }}{{ s.0.Esasy_Surat.url }}', '')">
+                                    <div class="post-little-elem">
+                                        <div class="post-big-header plh">
+                                            <a href="{% url 'habar' pk=s.0.id%}"><p>{{s.0.Ady_ru}}</p></a>
+                                        </div>
+                                        <a href="{% url 'habar' pk=s.0.id%}"><button class="post-big-btn">DOWAMY R</button></a>
+                                        <div class="post-big-date">{{ s.0.Wagty|date:"d.m.Y" }}</div>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="post-little">
+                                    <div class="post-little-elem" style="width: 100%">
+                                        <div class="post-big-header plh">
+                                            <a href="{% url 'habar' pk=s.0.id%}"><p>{{s.0.Ady_ru}}</p></a>
+                                        </div>
+                                        <a href="{% url 'habar' pk=s.0.id%}"><button class="post-big-btn">DOWAMY R</button></a>
+                                        <div class="post-big-date">{{ s.0.Wagty|date:"d.m.Y" }}</div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% else %}
+                            {% if s.0.Esasy_Surat %}
+                                <div class="post-little">
+                                    <script type="text/javascript">
+                                        var im{{ forloop.counter }} = [];
+                                        im{{ forloop.counter }}[1] = '{{ MEDIA_URL }}{{ s.0.Esasy_Surat.url }}';
+                                    </script>
+                                    <img src="{{ MEDIA_URL }}{{ s.0.Esasy_Surat.url }}" class="post-little-img" onclick="view_image(im{{ forloop.counter }}, '{{ MEDIA_URL }}{{ s.0.Esasy_Surat.url }}', '')">
+                                    <div class="post-little-elem">
+                                        <div class="post-big-header plh">
+                                            <a href="{% url 'habar' pk=s.0.id%}"><p>{{s.0.Ady_tm}}</p></a>
+                                        </div>
+                                        <a href="{% url 'habar' pk=s.0.id%}"><button class="post-big-btn">DOWAMY</button></a>
+                                        <div class="post-big-date">{{ s.0.Wagty|date:"d.m.Y" }}</div>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="post-little">
+                                    <div class="post-little-elem" style="width: 100%">
+                                        <div class="post-big-header plh">
+                                            <a href="{% url 'habar' pk=s.0.id%}"><p>{{s.0.Ady_tm}}</p></a>
+                                        </div>
+                                        <a href="{% url 'habar' pk=s.0.id%}"><button class="post-big-btn">DOWAMY</button></a>
+                                        <div class="post-big-date">{{ s.0.Wagty|date:"d.m.Y" }}</div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+				</div>
+			</div>
+			<div class="post-important">
+				<div class="important-field">
+					<div class="imp-header">
+                        {% if dil == 'en' %}IMPORTANT NEWS
+                        {% elif dil == 'ru' %}ЫВВВАА ЦУЦ
+                        {% else %}MÖHÜM HABARLAR{% endif %}
+                    </div>
+                        {% for h in moh_hb reversed%}
+                            {% if forloop.counter < 6 %}
+					<div class="important" {% if forloop.counter == 5 or forloop.counter == moh_hb|length %}style="border-bottom:none"{% endif %}>
+						<script type="text/javascript">
+							var imgs{{ forloop.counter }} = [];
+							imgs{{ forloop.counter }}[1] = '{{ MEDIA_URL }}{{ h.Esasy_Surat.url }}';
+						</script>
+						<img src="{{ MEDIA_URL }}{{ h.Esasy_Surat.url }}" class="important-img" onclick="view_image(imgs{{ forloop.counter }}, '{{ MEDIA_URL }}{{ h.Esasy_Surat.url }}', '')">
+						<div class="important-header">
+							<a href="{% url 'habar' pk=h.id%}"><p>{% if dil == 'en' %}{{ h.Ady_tm }}
+                                {% elif dil == 'ru' %}{{ h.Ady_tm }}
+                                {% else %}{{ h.Ady_tm }}{% endif %}
+                            </p></a>
+						</div>
+					</div>{% endif %}
+                        {% endfor %}
+				</div>
+				<a href="{% url 'additional' pk='sorag-jogap'%}">
+                    <div class="anim_gif">
+						<img src="{% static 'icn/turkmenistan1.gif'%}">
+						<img src="{% static 'icn/sowal_jogap.gif'%}">
+					</div>
+                </a>
+			</div>
+		</div>
+		<div class="short-vid-field">
+			<div class="short-vid-front">
+				<div class="short-vid-circle">
+					<div class="short-vid-elem">
+						<img src="{{ MEDIA_URL }}{{ Gif.0.Bas_Usti.url }}">
+					</div>
+					<img src="{{ MEDIA_URL }}{{ Gif.0.Bas_Gif.url }}" class="short-vid">
+				</div>
+			</div>
+			<img src="{{ MEDIA_URL }}{{ Gif.0.Bas_Arkafon.url }}" class="short-vid-back">
+		</div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript" src="{% static 'js/slider.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/image_player.js'%}"></script>
+{% endblock %}

@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{% static 'favicon.ico'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/app.css'%}">
+	<title>serhetabat-dovletabat.gov.tm</title>
+    {% block css %}
+
+    {% endblock %}
+    <style>
+        .selected{
+            background: {{ Renk.3.Renk_kody }};/*Menu active #068E1B*/
+        }
+    </style>
+</head>
+<body>
+	<script type="text/javascript">
+		var menu_sum = 10;
+        var w_back = 0;
+	</script>
+
+	<nav class="navbar-top" style="background:{{ Renk.0.Renk_kody }} ;"><!--header #07A31F-->
+    		<img src="{{ MEDIA_URL }}{{ Gosmaca.4.Surat_tm.url }}" class="year-logo">
+		<img src="{{ MEDIA_URL }}{{ Gosmaca.5.Surat_tm.url }}" class="navbar-top-img" id="navbar-top-img"/>
+
+		<h1>    {% if dil == 'ru' %}
+                    {{Yokarsy.Ru}}
+                {% elif dil == 'en' %}
+                    {{Yokarsy.En}}
+                {% else %}
+                    {{Yokarsy.Tm}}
+                {% endif %}
+                </h1>
+		<div class="langs">
+            <form method="POST" action="{{ request.path }}">
+                <input type="submit" id="btn_tm" name="dil" value="tm" style="display: none">
+                <div class="lang" id="lang-tm" onclick="document.getElementById('btn_tm').click()"><img src="{% static 'icn/tm.svg'%}">TM</div>
+
+                <input type="submit" id="btn_ru" name="dil" value="ru" style="display: none">
+                <div class="lang" onclick="document.getElementById('btn_ru').click()"><img src="{% static 'icn/ru.svg'%}">RU</div>
+
+                <input type="submit" id="btn_en" name="dil" value="en" style="display: none">
+                <div class="lang" onclick="document.getElementById('btn_en').click()"><img src="{% static 'icn/en.png'%}">EN</div>
+                {% csrf_token %}
+            </form>
+		</div>
+	</nav>
+	<div class="menu" id="menu" style="background: {{ Renk.2.Renk_kody }};"><!--Menu  #f8fafc-->
+        {% if dil == 'en' %}
+            <a href="{% url 'index' %}"><img src="{{ MEDIA_URL }}{{ Gosmaca.0.Surat_tm.url }}" class="main_logo"/></a>
+        {% elif dil == 'ru' %}
+            <a href="{% url 'index' %}"><img src="{{ MEDIA_URL }}{{ Gosmaca.0.Surat_tm.url }}" class="main_logo"/></a>
+        {% else %}
+            <a href="{% url 'index' %}"><img src="{{ MEDIA_URL }}{{ Gosmaca.0.Surat_tm.url }}" class="main_logo"/></a>
+        {% endif %}
+		<div class="btn_menu" id="btn_menu_shower">
+			<div class="lines"></div>
+			<div class="lines"></div>
+			<div class="lines"></div>
+		</div>
+		<div class="btn_menu" id="btn_menu_hider">
+			<div class="close">X</div>
+		</div>
+		<img src="{% static 'icn/beyik_yupek_yoly.jpg'%}" class="menu-back-img" id="menu-back-img"/>
+            <div class="elements">
+        {% for Menus in Menu %}
+                <a href="
+                            {% if Menus.Slug != 'bas-sahypa' %}
+                            {% url 'additional' pk=Menus.Slug%}
+                            {% else%}
+                            {% url 'index'%}
+                            {% endif %}
+                        ">
+                {% if dil == 'en' %}
+                    {% if active == Menus.Ady_en %}
+                        <div class="element selected">{{ Menus.Ady_en }}</div>
+                    {% else %}
+                        <div class="element">{{ Menus.Ady_en }}</div>
+                    {% endif %}
+                {% elif dil == 'ru' %}
+                    {% if active == Menus.Ady_ru %}
+                        <div class="element selected">{{ Menus.Ady_ru }}</div>
+                    {% else %}
+                        <div class="element">{{ Menus.Ady_ru }}</div>
+                    {% endif %}
+                {% else %}
+                    {% if active == Menus.Ady_tm %}
+                        <div class="element selected">{{ Menus.Ady_tm }}</div>
+                    {% else %}
+                        <div class="element">{{ Menus.Ady_tm }}</div>
+                    {% endif %}
+                {% endif %}
+                </a>
+        {% endfor %}
+            </div>
+		<div class="menu_langs">
+             <form method="POST" action="{{ request.path }}">
+                <input type="submit" id="btn_tm" name="dil" value="tm" style="display: none">
+                <div class="menu_lang" id="lang-tm" onclick="document.getElementById('btn_tm').click()"><img src="{% static 'icn/tm.svg'%}">TM</div>
+
+                <input type="submit" id="btn_ru" name="dil" value="ru" style="display: none">
+                <div class="menu_lang" onclick="document.getElementById('btn_ru').click()"><img src="{% static 'icn/ru.svg'%}">RU</div>
+
+                <input type="submit" id="btn_en" name="dil" value="en" style="display: none">
+                <div class="menu_lang" onclick="document.getElementById('btn_en').click()"><img src="{% static 'icn/ru.svg'%}">EN</div>
+                {% csrf_token %}
+            </form>
+		</div>
+	</div>
+	<script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+	<!-- Slide RESOLUTION - (52x22) -->
+	<!-- Slide-yn suratlary (34x21)-(17x11) -->
+    {% block body %}
+
+    {% endblock %}
+	<div class="footer" style="background: {{ Renk.1.Renk_kody }};"><!--Footer background #07A31F-->
+		<div class="footer_inside">
+            {% if dil == 'ru' %}
+			<div class="footer_elem">
+				<img src="{{ MEDIA_URL }}{{ Gosmaca.1.Surat_tm.url }}">
+			</div>
+			<div class="footer_elem">
+				<img src="{{ MEDIA_URL }}{{ Gosmaca.2.Surat_tm.url }}">
+				<img src="{{ MEDIA_URL }}{{ Gosmaca.3.Surat_tm.url }}">
+			</div>
+			<div class="footer_elem">
+				<div class="footer_status">
+					<h1>ПОСЕТИТЕЛИ САЙТА</h1>
+					<li>Сейчас: {{ Shuwagt }}</li>
+					<li>Сегодня: {{ Sugun }}</li>
+					<li>Вчера: {{ Duyn }}</li>
+					<li>Общая количество : {{ Jemi }}</li>
+				</div>
+				<div class="advised">
+					<h1>ПОЛЕЗНЫЕ ВЕБ-САЙТЫ</h1>
+					<a href="http://milligosun.gov.tm/">
+						<li>МИНИСТЕРСТВО ОБОРОНЫ ТУРКМЕНИСТАНА</li>
+					</a>
+					<a href="http://tdh.gov.tm/tm/">
+						<li>ЭЛЕКТРОННАЯ ГАЗЕТА «ТУРКМЕНИСТАН: ЗОЛОТОЙ ВЕК»</li>
+					</a>
+					<a href="http://migration.gov.tm/tm/">
+						<li>ГОСУДАРСТВЕННАЯ МИГРАЦИОННАЯ СЛУЖБА ТУРКМЕНИСТАНА</li>
+					</a>
+					<a href="https://www.customs.gov.tm/tk">
+						<li>ГОСУДАРСТВЕННАЯ ТАМОЖЕННАЯ СЛУЖБА ТУРКМЕНИСТАНА</li>
+					</a>
+				</div>
+            </div>
+                {% elif dil == 'en' %}
+			<div class="footer_elem">
+				<img src="{{ MEDIA_URL }}{{ Gosmaca.1.Surat_tm.url }}">
+			</div>
+			<div class="footer_elem">
+				<img src="{{ MEDIA_URL }}{{ Gosmaca.2.Surat_tm.url }}">
+				<img src="{{ MEDIA_URL }}{{ Gosmaca.3.Surat_tm.url }}">
+			</div>
+                <div class="footer_elem">
+				<div class="footer_status">
+					<h1>WEBSITE VISITORS</h1>
+					<li>Recent: {{ Shuwagt }}</li>
+					<li>Today: {{ Sugun }}</li>
+					<li>Yesterday: {{ Duyn }}</li>
+					<li>Total: {{ Jemi }}</li>
+				</div>
+				<div class="advised">
+					<h1>USEFUL LINKS</h1>
+					<a href="http://milligosun.gov.tm/">
+						<li>THE MINISTRY OF DEFENSE OF TURKMENISTAN</li>
+					</a>
+					<a href="http://tdh.gov.tm/tm/">
+						<li>NEWSPAPER "GOLDEN AGE"</li>
+					</a>
+					<a href="http://migration.gov.tm/tm/">
+						<li>STATE MIGRATION SERVICE OF TURKMENISTAN</li>
+					</a>
+					<a href="https://www.customs.gov.tm/tk">
+						<li>STATE CUSTOMS SERVICE OF TURKMENISTAN</li>
+					</a>
+				</div>
+                </div>
+                {% else %}
+			<div class="footer_elem">
+				<img src="{{ MEDIA_URL }}{{ Gosmaca.1.Surat_tm.url }}">
+			</div>
+			<div class="footer_elem">
+				<img src="{{ MEDIA_URL }}{{ Gosmaca.2.Surat_tm.url }}">
+				<img src="{{ MEDIA_URL }}{{ Gosmaca.3.Surat_tm.url }}">
+			</div>
+			<div class="footer_elem">
+				<div class="footer_status">
+					<h1>SAÝTA GIREN MYHMANLAR</h1>
+					<li>Şuwagt: {{ Shuwagt }}</li>
+					<li>Şu gün: {{ Sugun }}</li>
+					<li>Düýn: {{ Duyn }}</li>
+					<li>Jemi: {{ Jemi }}</li>
+				</div>
+				<div class="advised">
+					<h1>PEÝDALY WEB SAHYPALARY</h1>
+					<a href="http://milligosun.gov.tm/">
+						<li>MILLI GOŞUN</li>
+					</a>
+					<a href="http://tdh.gov.tm/tm/">
+						<li>"TÜRKMENISTAN: ALTYN ASYR" HABARLAR GULLUGY</li>
+					</a>
+					<a href="http://migration.gov.tm/tm/">
+						<li>DÖWLET MIGRASIÝA GULLUGY</li>
+					</a>
+					<a href="https://www.customs.gov.tm/tk">
+						<li>DÖWLET GÜMRÜK GULLUGY</li>
+					</a>
+				</div>
+                </div>
+                {% endif %}
+		</div>
+	</div>
+    {% block js %}
+
+    {% endblock %}
+</body>
+</html>

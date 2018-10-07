@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+
+{% endblock %}
+{% block body %}
+	<div class="main">
+		<div class="welcome">
+			<div class="w-front">
+            {% if dil == 'en' %}
+				<p><span id="w-text">Welcome to the {% if active != '' %}{{ active }}{% else %}Important News{% endif %}!</span><br>
+                    {% if active == 'News' %}
+                    <a href="{% url 'additional' pk='mohum-habar' %}">
+                    <button class="w-btn">IMPORTANT NEWS</button>
+                    </a>
+                    {% endif %}
+                </p>
+            {% elif dil == 'ru' %}
+				<p><span id="w-text">{% if active != '' %}{{ active }}{% else %}Mohum habar{% endif %} фывыфв ывфыв!</span><br>
+                    {% if active == 'Новости' %}
+                    <a href="{% url 'additional' pk='mohum-habar' %}">
+                    <button class="w-btn">ЫФВ ЫФВ Mohum Habar</button>
+                    </a>
+                    {% endif %}
+                </p>
+            {% else %}
+				<p><span id="w-text">{% if active != '' %}{{ active }}{% else %}Mohum Habar{% endif %} bölümine hoş geldiňiz!</span><br>
+                    {% if active == 'Habarlar' %}
+                    <a href="{% url 'additional' pk='mohum-habar' %}">
+                    <button class="w-btn">MÖHÜM HABARLAR</button>
+                    </a>
+                    {% endif %}
+                </p>
+            {% endif %}
+			</div>
+			<div class="w-back" id="w-back">
+				<img src="{% static 'uploads/habarlar.jpg'%}" class="w-img">
+			</div>
+		</div>
+		<div class="posts">
+			<div class="posts-main-header" style="text-transform: uppercase">
+                {% if dil == 'en' %}
+                    {% if active != '' %}{{ active }}{% else %}IMPORTANT NEWS{% endif %}
+                {% elif dil == 'ru' %}
+                    {% if active != '' %}{{ active }}{% else %}ЖДЖЛД{% endif %}
+                {% else %}
+                    {% if active != '' %}{{ active }}{% else %}MÖHÜM HABAR{% endif %}
+                {% endif %}
+            </div>
+        {% for habar in Habar reversed%}
+            {% if dil == 'en' %}
+                {% if habar.Esasy_Surat%}
+                <div class="post" {% if forloop.counter == Habar|length and forloop.counter0|divisibleby:2%}style="margin-left: 25%"{% endif %}>
+                    <div class="post-textfield">
+                        <div class="post-txt">
+                            <li class="post-header"><a href="{% url 'habar' pk=habar.id%}"><p>{{ habar.Ady_en }}</p></a></li>
+                            <p class="post-body">{{habar.Makala_en|truncatechars:200}}</p>
+                        </div>
+                        <a href="{% url 'habar' pk=habar.id%}"><button class="btn-more">DOWAMY</button></a>
+                    </div>
+                    <div class="post-id">
+                        <div class="post-id-line">
+                            <div class="id-line"></div>
+                        </div>
+                        <div class="post-date">
+                            <li class="post-day">{{ habar.Wagty|date:"d.m" }}</li>
+                            <li class="post-year">{{ habar.Wagty|date:"Y" }} </li>
+                        </div>
+                        <script type="text/javascript">
+                            var aaa{{forloop.counter}} = [];
+                            aaa{{forloop.counter}}[1] = '{{ MEDIA_URL }}{{ habar.Esasy_Surat.url }}';
+                        </script>
+                        <img src="{{ MEDIA_URL }}{{ habar.Esasy_Surat.url }}" class="post-img" onclick="view_image(aaa{{forloop.counter}}, '{{ MEDIA_URL }}{{ habar.Esasy_Surat.url }}', '')">
+                    </div>
+                </div>
+                {% else %}
+                <div class="post" {% if forloop.counter == Habar|length and forloop.counter0|divisibleby:2%}style="margin-left: 25%"{% endif %}>
+                    <div class="post-textfield no-img">
+                        <div class="post-txt">
+                            <li class="post-header"><a href="{% url 'habar' pk=habar.id%}"><p>{{ habar.Ady_en }}</p></a></li>
+                            <p class="post-body">{{ habar.Makala_en|truncatechars:350 }}</p>
+                        </div>
+                        <a href="{% url 'habar' pk=habar.id%}"><button class="btn-more btn-more-no_img">DOWAMY</button></a>
+                        <div class="no-img-date">{{ habar.Wagty|date:"d.m.Y" }}</div>
+                    </div>
+                </div>
+                {% endif %}
+
+            {% elif dil == 'ru' %}
+                {% if habar.Esasy_Surat%}
+                <div class="post" {% if forloop.counter == Habar|length and forloop.counter0|divisibleby:2%}style="margin-left: 25%"{% endif %}>
+                    <div class="post-textfield">
+                        <div class="post-txt">
+                            <li class="post-header"><a href="{% url 'habar' pk=habar.id%}"><p>{{ habar.Ady_ru }}</p></a></li>
+                            <p class="post-body">{{habar.Makala_ru|truncatechars:200}}</p>
+                        </div>
+                        <a href="{% url 'habar' pk=habar.id%}"><button class="btn-more">DOWAMY</button></a>
+                    </div>
+                    <div class="post-id">
+                        <div class="post-id-line">
+                            <div class="id-line"></div>
+                        </div>
+                        <div class="post-date">
+                            <li class="post-day">{{ habar.Wagty|date:"d.m" }}</li>
+                            <li class="post-year">{{ habar.Wagty|date:"Y" }} </li>
+                        </div>
+                        <script type="text/javascript">
+                            var aaa{{forloop.counter}} = [];
+                            aaa{{forloop.counter}}[1] = '{{ MEDIA_URL }}{{ habar.Esasy_Surat.url }}';
+                        </script>
+                        <img src="{{ MEDIA_URL }}{{ habar.Esasy_Surat.url }}" class="post-img" onclick="view_image(aaa{{forloop.counter}}, '{{ MEDIA_URL }}{{ habar.Esasy_Surat.url }}', '')">
+                    </div>
+                </div>
+                {% else %}
+                <div class="post" {% if forloop.counter == Habar|length and forloop.counter0|divisibleby:2%}style="margin-left: 25%"{% endif %}>
+                    <div class="post-textfield no-img">
+                        <div class="post-txt">
+                            <li class="post-header"><a href="{% url 'habar' pk=habar.id%}"><p>{{ habar.Ady_tm }}</p></a></li>
+                            <p class="post-body">{{ habar.Makala_tm|truncatechars:350 }}</p>
+                        </div>
+                        <a href="{% url 'habar' pk=habar.id%}"><button class="btn-more btn-more-no_img">DOWAMY</button></a>
+                        <div class="no-img-date">{{ habar.Wagty|date:"d.m.Y" }}</div>
+                    </div>
+                </div>
+                {% endif %}
+            {% else %}
+                {% if habar.Esasy_Surat%}
+                <div class="post" {% if forloop.counter == Habar|length and forloop.counter0|divisibleby:2%}style="margin-left: 25%" {% endif %}>
+                    <div class="post-textfield">
+                        <div class="post-txt">
+                            <li class="post-header"><a href="{% url 'habar' pk=habar.id%}"><p>{{ habar.Ady_tm }}</p></a></li>
+                            <p class="post-body">{{habar.Makala_tm|truncatechars:200}}</p>
+                        </div>
+                        <a href="{% url 'habar' pk=habar.id%}"><button class="btn-more">DOWAMY</button></a>
+                    </div>
+                    <div class="post-id">
+                        <div class="post-id-line">
+                            <div class="id-line"></div>
+                        </div>
+                        <div class="post-date">
+                            <li class="post-day">{{ habar.Wagty|date:"d.m" }}</li>
+                            <li class="post-year">{{ habar.Wagty|date:"Y" }} </li>
+                        </div>
+                        <script type="text/javascript">
+                            var aaa{{forloop.counter}} = [];
+                            aaa{{forloop.counter}}[1] = '{{ MEDIA_URL }}{{ habar.Esasy_Surat.url }}';
+                        </script>
+                        <img src="{{ MEDIA_URL }}{{ habar.Esasy_Surat.url }}" class="post-img" onclick="view_image(aaa{{forloop.counter}}, '{{ MEDIA_URL }}{{ habar.Esasy_Surat.url }}', '')">
+                    </div>
+                </div>
+                {% else %}
+                <div class="post" {% if forloop.counter == Habar|length and forloop.counter0|divisibleby:2%}style="margin-left: 25%" {% endif %}>
+                    <div class="post-textfield no-img">
+                        <div class="post-txt">
+                            <li class="post-header"><a href="{% url 'habar' pk=habar.id%}"><p>{{ habar.Ady_tm }}</p></a></li>
+                            <p class="post-body">{{ habar.Makala_tm|truncatechars:350 }}</p>
+                        </div>
+                        <a href="{% url 'habar' pk=habar.id%}"><button class="btn-more btn-more-no_img">DOWAMY</button></a>
+                        <div class="no-img-date">{{ habar.Wagty|date:"d.m.Y" }}</div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endif %}
+
+            {% if forloop.counter|divisibleby:2 %}
+                <div class="post-hr"></div>
+            {% endif %}
+        {% endfor %}
+{% if Habar.has_other_pages %}
+    <div class="sahypa">
+        <div class="sahypa1">
+        {% if Habar.has_previous %}
+            <a href="?page={{ users.previous_page_number }}"><div class="sahypalar" style="margin-left: 0"><</div></a>
+        {% else %}
+            <div class="sahypalar" style="margin-left: 0"><</div>
+        {% endif %}
+        {% for i in Habar.paginator.page_range %}
+          {% if Habar.number == i %}
+            <div class="sahypalar sah-active">{{ i }}</div>
+          {% else %}
+            <a href="?page={{ i }}"><div class="sahypalar">{{ i }}</div></a>
+          {% endif %}
+        {% endfor %}
+        {% if Habar.has_next %}
+            <a href="?page={{ Habar.next_page_number }}"><div class="sahypalar" style="border-right: none">></div></a>
+        {% else %}
+            <div class="sahypalar" style="border-right: none">></div>
+        {% endif %}
+        </div>
+    </div>
+{% endif %}
+		</div>
+	</div>
+{% endblock %}
+{% block js %}
+	<script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/welcome.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/image_player.js'%}"></script>
+{% endblock %}

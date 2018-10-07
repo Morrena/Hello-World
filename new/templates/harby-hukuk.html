@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+{% endblock %}
+{% block body %}
+	<div class="main">
+		<div class="welcome">
+			<div class="w-front">
+                {% if dil == 'en' %}
+				<p><span id="w-text">Welcome to the {{ active }}!</span></p>
+                {% elif dil == 'ru' %}
+				<p><span id="w-text">фывфыв {{ active }}!</span></p>
+                {% else %}
+				<p><span id="w-text">{{ active }} bölümine hoş geldiňiz!</span></p>
+                {% endif %}
+			</div>
+			<div class="w-back" id="w-back">
+				<img src="{% static 'uploads/habarlar.jpg'%}" class="w-img">
+			</div>
+		</div>
+
+		<div class="posts">
+			<div class="posts-main-header">
+                {% if dil == 'en' %}
+                    {{ active }}
+                {% elif dil == 'ru' %}
+                    {{ active }}
+                {% else %}
+                    {{ active }}
+                {% endif %}
+            </div>
+        {% for f in fayl %}
+            {% if dil == 'en' %}
+			<div class="file">
+                <img src="{{ MEDIA_URL }}{{ f.Ikonka.url }}" class="file-img">
+				<div class="file-txt">
+					<a href="#"><div class="file-header"><p>{{ f.Ady_en }}</p></div></a>
+					<div class="file-body"><p>{{ f.Mazmun_en }}</p></div>
+				</div>
+				<div class="file-btn-field">
+					<a href="{{ MEDIA_URL }}{{ f.Pdf.url }}">
+						<button class="btn-read">READ</button>
+					</a>
+				</div>
+			</div>
+            {% elif dil == 'ru' %}
+			<div class="file">
+                <img src="{{ MEDIA_URL }}{{ f.Ikonka.url }}" class="file-img">
+				<div class="file-txt">
+					<a href="#"><div class="file-header"><p>{{ f.Ady_ru }}</p></div></a>
+					<div class="file-body"><p>{{ f.Mazmun_ru }}</p></div>
+				</div>
+				<div class="file-btn-field">
+					<a href="{{ MEDIA_URL }}{{ f.Pdf.url }}">
+						<button class="btn-read">ЧИТАЙ</button>
+					</a>
+				</div>
+			</div>
+            {% else %}
+			<div class="file">
+                <img src="{{ MEDIA_URL }}{{ f.Ikonka.url }}" class="file-img">
+				<div class="file-txt">
+					<a href="#"><div class="file-header"><p>{{ f.Ady_tm }}</p></div></a>
+					<div class="file-body"><p>{{ f.Mazmun_tm }}</p></div>
+				</div>
+				<div class="file-btn-field">
+					<a href="{{ MEDIA_URL }}{{ f.Pdf.url }}">
+						<button class="btn-read">OKAŇ</button>
+					</a>
+				</div>
+			</div>
+            {% endif %}
+        {% endfor %}
+		</div>
+	</div>
+{% endblock %}
+{% block js %}
+	<script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/welcome.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/image_player.js'%}"></script>
+{% endblock %}

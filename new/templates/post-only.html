@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+{% endblock %}
+{% block js %}
+    <script src="{% static 'js/image_player.js' %}"></script>
+{% endblock %}
+{% block body %}
+	<div class="main">
+		<script type="text/javascript">
+			var w_back = 0;
+		</script>
+<!--		<div class="welcome">
+			<div class="w-front">
+				<p><span id="w-text">Harby durmuş bölümine hoş geldiňiz!</span></p>
+			</div>
+			<div class="w-back" id="w-back">
+				<img src="uploads/habarlar.jpg" class="w-img">
+			</div>
+		</div>
+-->
+        <div class="post-only-field">
+			<div class="posts-main-header">MAKALA</div>
+			<div class="post-only">
+				<script type="text/javascript">
+					var imgs = [];
+					imgs[1] = '{% if Habar.Esasy_Surat%}{{ MEDIA_URL }}{{ Habar.Esasy_Surat.url }}{% endif %}';
+                    {% for s in surat %}
+                        imgs[{{forloop.counter}}+1]='{{ MEDIA_URL }}{{ s.Suraty.url }}';
+                    {% endfor %}
+                </script>
+                {% if Habar.Esasy_Surat %}
+				<img src="{{ MEDIA_URL }}{{ Habar.Esasy_Surat.url }}" class="post-only-img" onclick="view_image(imgs, '{{ MEDIA_URL }}{{ Habar.Esasy_Surat.url }}', '')">
+                {% endif %}
+				<div class="post-additional-img-field">
+                    {% for s in surat %}
+					<img src="{{ MEDIA_URL }}{{ s.Suraty.url }}" class="post-additional-img" onclick="view_image(imgs, '{{ MEDIA_URL }}{{ s.Suraty.url }}', '')">
+                    {% endfor %}
+				</div>
+                {% if dil == 'en' %}
+				<div class="post-only-header">
+					<p>{{ Habar.Ady_en }}</p>
+				</div>
+				<div class="post-only-body">
+					<p>	{{ Habar.Makala_en }}</p>
+				</div>
+                {% elif dil == 'ru' %}
+				<div class="post-only-header">
+					<p>{{ Habar.Ady_ru }}</p>
+				</div>
+				<div class="post-only-body">
+					<p>	{{ Habar.Makala_ru }}</p>
+				</div>
+                {% else %}
+				<div class="post-only-header">
+					<p>{{ Habar.Ady_tm }}</p>
+				</div>
+				<div class="post-only-body">
+					<p>	{{ Habar.Makala_tm }}</p>
+				</div>
+            {% endif %}
+				<div class="post-inf-field">
+					<img src="{% static 'icn/eye.png'%}" class="post-eye">
+					<li class="post-read">{{ Habar.Okalan }}</li>
+					<div class="post-only-date">{{ Habar.Wagty|date:"d.m.Y" }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css%}{% endblock %}
+{% block body %}
+    <div class="main">
+    <script type="text/javascript">
+			var w_back = 0;
+		</script>
+
+		<div class="welcome">
+			<div class="w-front">
+				<div class="w-text">
+                    {% if dil == 'en' %}
+					<span id="w-text">Welcome to the {{ active }}!</span>
+                    {% elif dil == 'ru' %}
+					<span id="w-text">{{ active }} ывавыа!</span>
+                    {% else %}
+					<span id="w-text">{{ active }} bölümine hoş geldiňiz!</span>
+                    {% endif %}
+				</div>
+				<div class="w-btn-field">
+					<a href="{% url 'additional' pk='multimediya'%}">
+						<button class="w-btn-circle" style="float: left;">
+                            {% if dil == 'en' %}<div class="wb-circle-front">Pictures</div>
+                            {% elif dil == 'ru' %}<div class="wb-circle-front">РИСУНКА</div>
+                            {% else %}<div class="wb-circle-front">Suratlar</div>{% endif %}
+							<img src="{{ MEDIA_URL }}{{ Gif.0.Media_Surat.url }}" class="wb-circle-back">
+						</button>
+					</a>
+					<a href="{% url 'videos'%}">
+						<button class="w-btn-circle"  style="float: right;">
+                            {% if dil == 'en' %}<div class="wb-circle-front">Videos</div>
+                            {% elif dil == 'ru' %}<div class="wb-circle-front">ВИДЕО</div>
+                            {% else %}<div class="wb-circle-front">Wideolar</div>{% endif %}
+							<img src="{{ MEDIA_URL }}{{ Gif.0.Media_Video.url }}" class="wb-circle-back">
+						</button>
+					</a>
+				</div>
+			</div>
+			<div class="w-back" id="w-back">
+				<img src="{% static 'uploads/habarlar.jpg'%}" class="w-img">
+			</div>
+		</div>
+
+
+    		<div class="media">
+			<!--WIDEOLAR-->
+			<div class="media-header">MULTIMEDIA > WIDEOLAR - Apoel vs Real Madrid</div>
+			<div class="media-body">
+				<div class="video_player_box">
+					<video class="my_video" width="100%" height="auto" controls="controls" autoplay>
+						<source src="{{ MEDIA_URL }}{{ vid.Vidyo.url }}">
+					</video>
+					<div class="video_subject">
+						Apoel vs Real Madrid
+					</div>
+				</div>
+			</div>
+		</div>
+
+        </div>
+{% endblock %}
+{% block js %}
+{% endblock %}

@@ -1,0 +1,171 @@
+[Сб 22.09.18 20:31] Aman : Gowmy Dowran 
+[Сб 22.09.18 20:31] Aman : Naili 
+[Сб 22.09.18 20:31] Dowran Nurgeldiyew : Salam govumy agam 
+[Сб 22.09.18 20:31] Dowran Nurgeldiyew : men Dowlet 
+[Сб 22.09.18 20:31] Dowran Nurgeldiyew : Dowran yanymda 
+[Сб 22.09.18 20:31] Aman : Jan saglyk 
+[Сб 22.09.18 20:31] Aman : Gechyami?)) 
+[Сб 22.09.18 20:31] Aman : Gowlay 
+[Сб 22.09.18 20:31] Dowran Nurgeldiyew : gul yaly)) 
+[Сб 22.09.18 20:31] Aman : Walikim 
+[Сб 22.09.18 20:31] Dowran Nurgeldiyew : ishler govumy 
+[Сб 22.09.18 20:31] Aman : Sen shaherde dalmi?? 
+[Сб 22.09.18 20:31] Aman : Gowlay 
+[Сб 22.09.18 20:31] Dowran Nurgeldiyew : hava shaherde biz 
+[Сб 22.09.18 20:31] Aman : Sen natyang?? 
+[Сб 22.09.18 20:31] Dowran Nurgeldiyew : serhetde 
+[Сб 22.09.18 20:32] Dowran Nurgeldiyew : gogl swaboda 
+[Сб 22.09.18 20:32] Aman : Dowranam shahere geldimi 
+[Сб 22.09.18 20:32] Dowran Nurgeldiyew : hava 
+[Сб 22.09.18 20:32] Aman : Dogry 
+[Сб 22.09.18 20:32] Aman : Hachan baryp gorup bolya?? Nahilo rejim 
+[Сб 22.09.18 20:32] Aman : ?? 
+[Сб 22.09.18 20:32] Dowran Nurgeldiyew : bize komegeniniz gerek boldy 
+[Сб 22.09.18 20:32] Aman : Aydyp otyr 
+[Сб 22.09.18 20:33] Aman : Yone shu wagt yolda sarahsdan ashgabada gelyan 
+[Сб 22.09.18 20:33] Dowran Nurgeldiyew : security meselesinde 
+[Сб 22.09.18 20:33] Aman : Aha 
+[Сб 22.09.18 20:33] Dowran Nurgeldiyew : wagt barmy yazyshmana 
+[Сб 22.09.18 20:34] Aman : Wagt kan welin yolda anten yiese bolya 
+[Сб 22.09.18 20:34] Aman : Yitmese)) 
+[Сб 22.09.18 20:34] Dowran Nurgeldiyew : yityanca komek edayin 
+[Сб 22.09.18 20:35] Dowran Nurgeldiyew : biz python django we laravelde website taynlayas 
+[Сб 22.09.18 20:35] Dowran Nurgeldiyew : haysy has goragly bolar 
+[Сб 22.09.18 20:36] Dowran Nurgeldiyew : website-y admin tarapyny polna secure etmeli edibilshimizden 
+[Сб 22.09.18 20:38] Dowran Nurgeldiyew : admin panelde statistika gerek kim website ataka etjek bolya, kim girdi, cykdy w.s.m 
+[Сб 22.09.18 20:39] Dowran Nurgeldiyew : cmd de gorkezer yalak bolsada bolya 
+[Сб 22.09.18 20:39] Dowran Nurgeldiyew : azajyk ugrukdyraysanyz hic ol zatlara kan dushunjamiz yok 
+[Сб 22.09.18 20:41] Dowran Nurgeldiyew : Uly ynam bildirdiler bize elimizden geldigice ederis diydik, sizem komek edebilseniz eger 
+[Сб 22.09.18 20:46] Aman : ?? 
+[Сб 22.09.18 20:47] Aman : Dushundim 
+[Сб 22.09.18 20:47] Aman : Django laravel bn aram yok 
+[Сб 22.09.18 20:48] Aman : (( 
+[Сб 22.09.18 20:48] Aman : Yone gelyan atakalary gorup bolya 
+[Сб 22.09.18 20:48] Dowran Nurgeldiyew : programman usti bilenmi 
+[Сб 22.09.18 20:48] Dowran Nurgeldiyew : ya elde yazyanyzmy 
+[Сб 22.09.18 20:49] Aman : Web server size chykaryp berya 
+[Сб 22.09.18 20:49] Aman : Hayay ip den nahili request gelyanni 
+[Сб 22.09.18 20:49] Dowran Nurgeldiyew : Server ozumizde 
+[Сб 22.09.18 20:49] Aman : Kan kyn zada dal 
+[Сб 22.09.18 20:50] Dowran Nurgeldiyew : goragy name edip bolar 
+[Сб 22.09.18 20:50] Aman : Yone gelyan requesti analiz edip atakamy dalmi bilmek problema bolya 
+[Сб 22.09.18 20:51] Dowran Nurgeldiyew : analiz nadip edyaniz kitap zat barmy okar yaly 
+[Сб 22.09.18 20:52] Aman : Gelen request-ing ataka dygyny  bilensong block etmegem kyn dal 
+[Сб 22.09.18 20:52] Aman : Esasy bilmek kyn 
+[Сб 22.09.18 20:52] Dowran Nurgeldiyew : linux ulanyanyzmy ya windows 
+[Сб 22.09.18 20:52] Dowran Nurgeldiyew : shol ip ni blok edaymelimi 
+[Сб 22.09.18 20:52] Aman : Linux 
+[Сб 22.09.18 20:52] Aman : Sebabi linux etmesengiz gorag kyn bolor 
+[Сб 22.09.18 20:53] Dowran Nurgeldiyew : server linuxda dur 
+[Сб 22.09.18 20:53] Aman : Ip ni block etsengem bolya dige shol requesting ozuni 
+[Сб 22.09.18 20:53] Dowran Nurgeldiyew : aha dushundim 
+[Сб 22.09.18 20:54] Aman : Site nahili site international site-my?? 
+[Сб 22.09.18 20:54] Dowran Nurgeldiyew : government 
+[Сб 22.09.18 20:54] Aman : Eger dinge oz ishgarleringiz ulanjak bolyamy 
+[Сб 22.09.18 20:55] Dowran Nurgeldiyew : Yok hemme kisi ulanyar 
+[Сб 22.09.18 20:55] Dowran Nurgeldiyew : Internetda goyulya 
+[Сб 22.09.18 20:55] Dowran Nurgeldiyew : international 
+[Сб 22.09.18 20:55] Dowran Nurgeldiyew : shongam goragy gerek  
+[Сб 22.09.18 20:55] Dowran Nurgeldiyew : http://serhetabat-dovletabat.gov.tm 
+[Сб 22.09.18 20:56] Dowran Nurgeldiyew : shul shuwagt durany taze goymaly. Yonekey mysal ucin http-ni https-e owurmeli diyya eyyam goragy yok hasap edyaler 
+[Сб 22.09.18 20:56] Aman : International bolmajak bolsa dinge turkmem iplere jogap ber diyseng bolany 
+[Сб 22.09.18 20:57] Aman : Yada serverini telekomdan alsangy biz gorap beryas 
+[Сб 22.09.18 20:57] Dowran Nurgeldiyew : Yok server ozumizde 
+[Сб 22.09.18 20:58] Dowran Nurgeldiyew : international 
+[Сб 22.09.18 20:58] Aman : Domain telekomdan alynypdyra 
+[Сб 22.09.18 20:58] Dowran Nurgeldiyew : hawa ishlap dur 
+[Сб 22.09.18 20:59] Dowran Nurgeldiyew : tazeden yazmaly 
+[Сб 22.09.18 20:59] Aman : Seret servee ozungizde dursa wapshe dongar 
+[Сб 22.09.18 20:59] Aman : Sebabi 
+[Сб 22.09.18 21:00] Dowran Nurgeldiyew : server guycli 
+[Сб 22.09.18 21:01] Aman : milligoshun.gov.tm 
+[Сб 22.09.18 21:01] Aman : Ozlerinde shulang serveri wapshe ishlanok 
+[Сб 22.09.18 21:01] Aman : Gorjek bolup goray 
+[Сб 22.09.18 21:01] Aman : milligosun.gov.tm bolmagam ahmal 
+[Сб 22.09.18 21:01] Aman : Server guycunden dal inet pes bolya 
+[Сб 22.09.18 21:02] Aman : Opshy bir internet alyp serveram shonga baglap etipdirler welin koprak ad giriberse goni dongya sitelary 
+[Сб 22.09.18 21:02] Aman : Ad 
+[Сб 22.09.18 21:02] Aman : Adam 
+[Сб 22.09.18 21:03] Dowran Nurgeldiyew : internet sho 10mgbit 
+[Сб 22.09.18 21:04] Dowran Nurgeldiyew : hava azajyk dushunje aldym' 
+[Сб 22.09.18 21:04] Aman : Edil 1 serveri goramak bolsa has angsat wariantlaram bar bolmagam ahmal sorashdyryp goreyin 
+[Сб 22.09.18 21:05] Dowran Nurgeldiyew : Goranmak bashga bizinki bashga 
+[Сб 22.09.18 21:05] Aman : Howa howa 
+[Сб 22.09.18 21:05] Dowran Nurgeldiyew : 1terabyte pamida bar eken 
+[Сб 22.09.18 21:06] Dowran Nurgeldiyew : 1 ay mohlet bar 
+[Сб 22.09.18 21:07] Aman : Dushundim 
+[Сб 22.09.18 21:08] Dowran Nurgeldiyew : indi atakalardan nahili goranmak bolar nahili maslahatlar namelering komegi bilen yada prog-lar bardyr belki 
+[Сб 22.09.18 21:08] Aman : Server alynanda esasy network rol oynayar oytyan 
+[Сб 22.09.18 21:08] Dowran Nurgeldiyew : kitap shonga degishli 
+[Сб 22.09.18 21:09] Aman : Owasp diip bir zat bar gozlap gor 
+[Сб 22.09.18 21:10] Dowran Nurgeldiyew : progmy ya kitapmy 
+[Сб 22.09.18 21:10] Aman : Gelyan atakalardan goranmak uchin 
+[Сб 22.09.18 21:10] Aman : Prog 
+[Сб 22.09.18 21:10] Dowran Nurgeldiyew : sizem shondamy 
+[Сб 22.09.18 21:11] Aman : Howa bizem ulanyas shony 
+[Сб 22.09.18 21:11] Dowran Nurgeldiyew : crosside sql inject shular yaly atakalary okadyk 
+[Сб 22.09.18 21:12] Dowran Nurgeldiyew : owasp linuxda ishleyami 
+[Сб 22.09.18 21:12] Dowran Nurgeldiyew : windowsdada barmy 
+[Сб 22.09.18 21:13] Aman : Linuxda ishleya 
+[Сб 22.09.18 21:13] Aman : Atackalary ozungiz okap goranjak bolsangyz kyn dusher 
+[Сб 22.09.18 21:13] Aman : Owasp atakalardan goranmak uchin filter yazyalar 
+[Сб 22.09.18 21:13] Dowran Nurgeldiyew : hawa kyyn eken laravele uytgeshik ataka django uytgeshik ataka edyan ekenler 
+[Сб 22.09.18 21:14] Aman : Owasp aslynda ulanmak uchin mugt 
+[Сб 22.09.18 21:14] Dowran Nurgeldiyew : website - y scan edyan programma bilyanizmi 
+[Сб 22.09.18 21:14] Dowran Nurgeldiyew : yada biri scan edyan bolsa bize habar geler yaly 
+[Сб 22.09.18 21:15] Aman : Yone atackalardan goranmak uchin owasp team filter yazyalar 
+[Сб 22.09.18 21:15] Dowran Nurgeldiyew : ejiz nokatlaryny gorkezyan ekenda scan edip 
+[Сб 22.09.18 21:15] Aman : Jang edip bilyangizmi?? 
+[Сб 22.09.18 21:15] Dowran Nurgeldiyew : yonekeyje websiteda goylan suratatada herhilek ataka edip barlap goryan eken 
+[Сб 22.09.18 21:15] Aman : Howa olar service lerem bar ulanyas 
+[Сб 22.09.18 21:15] Dowran Nurgeldiyew : wah shuvagt tel yok 
+[Сб 22.09.18 21:16] Aman : Haa ok ok 
+[Сб 22.09.18 21:16] Dowran Nurgeldiyew : nace adamyn ustinden habarlashyp imo acyp size yazdyk 
+[Сб 22.09.18 21:16] Aman : Baybouuu 
+[Сб 22.09.18 21:16] Aman : ))) 
+[Сб 22.09.18 21:16] Dowran Nurgeldiyew : filter name bilen yazylya 
+[Сб 22.09.18 21:17] Aman : C bilen yazyalar welin sen yazjak bolsang kyn bolor 
+[Сб 22.09.18 21:17] Dowran Nurgeldiyew : scan shol service ler edyami 
+[Сб 22.09.18 21:17] Dowran Nurgeldiyew : 1 ayda hiczada yetiship bolmaya ola anyk 
+[Сб 22.09.18 21:17] Aman : Howa scan edip beryan servicelee bar olar internetdan scan edip sanga mail zat oklap beryaler 
+[Сб 22.09.18 21:18] Dowran Nurgeldiyew : dogry  
+[Сб 22.09.18 21:18] Aman : 1 2 gezek yada 1 2 hepde mugt edyaler yone song pully etyaler 
+[Сб 22.09.18 21:18] Aman : Yada ayda 1 sapar mugt goyyalar 
+[Сб 22.09.18 21:19] Aman : Karochi barlamak uchin mugt edyaler seryozny ish uchin ulanjak bolsang pully 
+[Сб 22.09.18 21:19] Dowran Nurgeldiyew : sholar yaly programma bar eken birinin elinde 
+[Сб 22.09.18 21:19] Dowran Nurgeldiyew : shon bn gelip barlaya 
+[Сб 22.09.18 21:19] Dowran Nurgeldiyew : dushnikli 
+[Сб 22.09.18 21:20] Dowran Nurgeldiyew : Agam gmailinizi berayin 
+[Сб 22.09.18 21:20] Dowran Nurgeldiyew : nomerinizem 
+[Сб 22.09.18 21:27] Aman : Bizing ulanyanlarymyz goni internetden edya sen bilengogam song sanga scan netijesini berya 
+[Сб 22.09.18 21:27] Aman : Shu site yng shular yaly ejiz yerleri bar diip 
+[Сб 22.09.18 21:27] Aman : Seret birem siz site yazanyngyzda gowy uns berip yazmaly.   Sql injection php injection attack zatlar bar sholar hakynda gowja edip okashdyryng 
+[Сб 22.09.18 21:29] Dowran Nurgeldiyew : agajandan sorap berayinda ertir djangomy yada laravelmi has dayow goragda 
+[Сб 22.09.18 21:29] Aman : 64844675 
+[Сб 22.09.18 21:29] Aman : mailtoamangeldi@gmail.com 
+[Сб 22.09.18 21:29] Aman : Nadip baryp gorup bolya sizi?? 
+[Сб 22.09.18 21:29] Aman : Haysy gunler haysy wagtlar nirden barmaly?? 
+[Сб 22.09.18 21:30] Dowran Nurgeldiyew : gogl swabodada bolyas 
+[Сб 22.09.18 21:30] Dowran Nurgeldiyew : dine ishleyas 24 sagatS:))) 
+[Сб 22.09.18 21:30] Dowran Nurgeldiyew : hijem gorup bolaok 
+[Сб 22.09.18 21:30] Dowran Nurgeldiyew : Dowran yazya 
+[Сб 22.09.18 21:31] Aman : Nahar zat ertseng bolyamy?? 
+[Сб 22.09.18 21:31] Dowran Nurgeldiyew : Men ertir sorap goreyin sholar yalak mumkincilik bolsa habarlasharyn 
+[Сб 22.09.18 21:31] Aman : Arkayyn otyryp iyip ichip bolyami?? 
+[Сб 22.09.18 21:31] Dowran Nurgeldiyew : baride cas yok wah bolmasa mesele dal 
+[Сб 22.09.18 21:31] Aman : ))  namoow 
+[Сб 22.09.18 21:31] Dowran Nurgeldiyew : casda dal biz merkez 
+[Сб 22.09.18 21:32] Aman : Gayrat et 
+[Сб 22.09.18 21:32] Dowran Nurgeldiyew : pentagon 
+[Сб 22.09.18 21:32] Aman : Hahahaha 
+[Сб 22.09.18 21:32] Dowran Nurgeldiyew : chykmak boolonk 
+[Сб 22.09.18 21:32] Dowran Nurgeldiyew : dashyndan icinden maglumat syzmaly dal 
+[Сб 22.09.18 21:32] Dowran Nurgeldiyew : hany habarlasharys agam sagja bolun 
+[Сб 22.09.18 21:33] Dowran Nurgeldiyew : uwalneniya zat alybilsek habarlashyan 
+[Сб 22.09.18 21:33] Aman : Habar etgin barjakdyrn 
+[Сб 22.09.18 21:33] Aman : Ok ok sagaman gulluk edig 
+[Сб 22.09.18 21:33] Dowran Nurgeldiyew : Bolya sagjabolun 
+[Сб 22.09.18 21:33] Aman : Hokman 
+[Сб 22.09.18 21:33] Dowran Nurgeldiyew : Spasibo 
+[Сб 22.09.18 21:33] Aman : Ok 
+

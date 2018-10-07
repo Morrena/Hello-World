@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+{% endblock %}
+{% block body %}
+    <div class="main">
+<script type="text/javascript">
+			var w_back = 0;
+		</script>
+
+		<div class="welcome">
+			<div class="w-front">
+				<div class="w-text">
+                    {% if dil == 'en' %}
+					<span id="w-text">Welcome to the {{ active }}!</span>
+                    {% elif dil == 'ru' %}
+					<span id="w-text">{{ active }} ывавыа!</span>
+                    {% else %}
+					<span id="w-text">{{ active }} bölümine hoş geldiňiz!</span>
+                    {% endif %}
+				</div>
+				<div class="w-btn-field">
+					<a href="{% url 'additional' pk='multimediya'%}">
+						<button class="w-btn-circle" style="float: left;">
+                            {% if dil == 'en' %}<div class="wb-circle-front">Pictures</div>
+                            {% elif dil == 'ru' %}<div class="wb-circle-front">РИСУНКА</div>
+                            {% else %}<div class="wb-circle-front">Suratlar</div>{% endif %}
+							<img src="{{ MEDIA_URL }}{{ Gif.0.Media_Surat.url }}" class="wb-circle-back">
+						</button>
+					</a>
+					<a href="{% url 'videos'%}">
+						<button class="w-btn-circle"  style="float: right;">
+                            {% if dil == 'en' %}<div class="wb-circle-front">Videos</div>
+                            {% elif dil == 'ru' %}<div class="wb-circle-front">ВИДЕО</div>
+                            {% else %}<div class="wb-circle-front">Wideolar</div>{% endif %}
+							<img src="{{ MEDIA_URL }}{{ Gif.0.Media_Video.url }}" class="wb-circle-back">
+						</button>
+					</a>
+				</div>
+			</div>
+			<div class="w-back" id="w-back">
+				<img src="{% static 'uploads/habarlar.jpg'%}" class="w-img">
+			</div>
+		</div>
+    		<div class="media">
+			<!--SURATLAR--><script>var imgs = [];</script>
+			<div class="media-header">MULTIMEDIA> SURATLAR - HARBY DURMUŞ BARADA</div>
+			<div class="media-body">
+                {% for s in sur %}
+                    <script type="text/javascript">
+                        imgs[{{ forloop.counter }}] = '{{ MEDIA_URL }}{{ s.Surat.url }}';
+                    </script>
+				    <div class="media-photo">
+					<div class="post-id-line">
+						<div class="id-line"></div>
+					</div>
+					<img src="{{ MEDIA_URL }}{{ s.Surat.url }}" onclick="view_image(imgs, '{{ MEDIA_URL }}{{ s.Surat.url }}', '')">
+				</div>
+                {% endfor %}
+			</div>
+		</div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script src="{% static 'js/image_player.js' %}"></script>
+{% endblock %}

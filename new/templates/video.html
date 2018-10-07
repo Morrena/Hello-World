@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+{% endblock %}
+{% block body %}
+    <div class="main">
+        <script type="text/javascript">
+			var w_back = 0;
+		</script>
+
+		<div class="welcome">
+			<div class="w-front">
+				<div class="w-text">
+                    {% if dil == 'en' %}
+					<span id="w-text">Welcome to the {{ active }}!</span>
+                    {% elif dil == 'ru' %}
+					<span id="w-text">{{ active }} ывавыа!</span>
+                    {% else %}
+					<span id="w-text">{{ active }} bölümine hoş geldiňiz!</span>
+                    {% endif %}
+				</div>
+				<div class="w-btn-field">
+					<a href="{% url 'additional' pk='multimediya'%}">
+						<button class="w-btn-circle" style="float: left;">
+                            {% if dil == 'en' %}<div class="wb-circle-front">Pictures</div>
+                            {% elif dil == 'ru' %}<div class="wb-circle-front">РИСУНКА</div>
+                            {% else %}<div class="wb-circle-front">Suratlar</div>{% endif %}
+							<img src="{{ MEDIA_URL }}{{ Gif.0.Media_Surat.url }}" class="wb-circle-back">
+						</button>
+					</a>
+					<a href="{% url 'videos'%}">
+						<button class="w-btn-circle"  style="float: right;">
+                            {% if dil == 'en' %}<div class="wb-circle-front">Videos</div>
+                            {% elif dil == 'ru' %}<div class="wb-circle-front">ВИДЕО</div>
+                            {% else %}<div class="wb-circle-front">Wideolar</div>{% endif %}
+							<img src="{{ MEDIA_URL }}{{ Gif.0.Media_Video.url }}" class="wb-circle-back">
+						</button>
+					</a>
+				</div>
+			</div>
+			<div class="w-back" id="w-back">
+				<img src="{% static 'uploads/habarlar.jpg'%}" class="w-img">
+			</div>
+		</div>
+
+		<div class="media">
+			<!--WIDEOLAR-->
+			<div class="media-header">MULTIMEDIA > WIDEOLAR</div>
+			<div class="media-body">
+                {% for v in vid %}
+				<a href="{% url 'video' pk=v.id%}">
+					<div class="vid-field">
+						<div class="post-id-line">
+							<div class="id-line"></div>
+						</div>
+						<div class="vid-date">
+							<div class="date1">{{ v.created_at|date:"d.m" }}</div>
+							<div class="date2">{{ v.created_at|date:"Y" }}</div>
+						</div>
+						<div class="vid-front">
+							<img src="{% static 'icn/play.png'%}" class="play_icon">
+							<div class="vid-subject">
+								<p>{{ v.Ady_tm }}</p>
+							</div>
+						</div>
+						<img src="{{ MEDIA_URL }}{{ v.Vidyo_Surat.url }}" class="vid-img">
+					</div>
+				</a>
+                {% endfor %}
+			</div>
+		</div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/welcome.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/image_player.js'%}"></script>
+
+{% endblock %}
